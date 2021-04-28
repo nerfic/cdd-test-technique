@@ -2,7 +2,7 @@
 
 ![consigne](https://github.com/nerfic/cdd-test-technique/blob/main/img/consigne.PNG?raw=true)
 
-##Pour ce test technique j'ai choisis MongoDB pour la base de donnée.
+### Pour ce test technique j'ai choisis MongoDB pour la base de donnée.
 
 Voici les différentes routes de l'API :
 
@@ -13,9 +13,12 @@ Voici les différentes routes de l'API :
 5) Supprimer un poulet avec son ID = DELETE http://localhost:8000/chicken/:id
 6) Faire avancer un poulet avec son ID et un query params "steps" => POST http://localhost:8000/chicken/run/:id?steps=number
 
-Au lieu de faire avancer le poulet de 1 steps, j'ai préféré pouvoir choisir le nombre de pas qu'on souhaite.
+### Mes ajouts : 
 
-##Installation : 
+* Au lieu de faire avancer le poulet de 1 steps, j'ai préféré pouvoir choisir le nombre de pas qu'on souhaite.
+* Ajout d'un fichier fixtures.js pour avoir déjà des poulets dans la base de donnée
+
+### Installation : 
 
 1) git clone git@github.com:nerfic/cdd-test-technique.git
 2) cd cdd-test-technique && npm install
