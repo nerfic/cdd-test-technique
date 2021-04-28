@@ -1,8 +1,8 @@
 # Test technique pour Clac des doigts
 
-![consigne](img)
+![consigne](https://github.com/nerfic/cdd-test-technique/blob/main/img/consigne.PNG?raw=true)
 
-Pour ce test technique j'ai choisis MongoDB pour la base de donnée.
+###Pour ce test technique j'ai choisis MongoDB pour la base de donnée.
 
 Voici les différentes routes de l'API :
 
@@ -15,7 +15,7 @@ Voici les différentes routes de l'API :
 
 Au lieu de faire avancer le poulet de 1 steps, j'ai préféré pouvoir choisir le nombre de pas qu'on souhaite.
 
-Installation : 
+###Installation : 
 
 1) git clone git@github.com:nerfic/cdd-test-technique.git
 2) cd cdd-test-technique && npm install
