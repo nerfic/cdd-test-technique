@@ -8,10 +8,18 @@ Voici les différentes routes de l'API :
 
 1) Récupérer tous les poulets => GET http://localhost:8000/chicken
 2) Ajouter un poulet => POST http://localhost:8000/chicken
+
+| Champs | Type | Obligatoire |
+| --------------- | --------------- | --------------- |
+| name | String | Oui |
+| birthday | Date | Non |
+| weight | Number | Oui |
+
 3) Récupérer les informations d'un poulet avec son ID => GET http://localhost:8000/chicken/:id
 4) Modifier les informations d'un poulet avec son ID => PUT http://localhost:8000/chicken/:id
 5) Supprimer un poulet avec son ID = DELETE http://localhost:8000/chicken/:id
-6) Faire avancer un poulet avec son ID et un query params "steps" => POST http://localhost:8000/chicken/run/:id?steps=number
+6) Faire avancer un poulet d'un pas avec son ID => POST http://localhost:8000/chicken/run/:id
+6) Faire avancer un poulet avec un nombre de pas choisi avec son ID et un query params "steps" => POST http://localhost:8000/chicken/run/:id?steps=number
 
 ### Mes ajouts : 
 
