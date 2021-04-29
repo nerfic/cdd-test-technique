@@ -23,27 +23,37 @@ router.post("/", async (req, res) => { // Add chicken POST http://localhost:8000
         res.status(200).send("Chicken created!")
     } catch (err) {
         console.log(err)
-        res.status(500).send("Internal Server Error")
+        res.status(400).send("Il un ou plusieurs champs!")
     }
 })
 
-router.post("/run/:id", async (req, res) => { // Chicken run with ID and query params "steps" POST http://localhost:8000/chicken/run/:id?steps=150
+// Chicken run with ID and query params "steps" POST http://localhost:8000/chicken/run/:id?steps=150
+// Chicken run 1 step with ID POST http://localhost:8000/chicken/run/:id
+
+router.post("/run/:id", async (req, res) => {
     try {
         const chicken = await ChickenModel.findById(req.params.id)
         if (req.query.steps) {
             if (isNaN(req.query.steps)) {
-                res.status(404).send("Value of query params steps is not a number!")
+                res.status(400).send("Value of query params steps is not a number!")
                 return;
             } else {
                 await ChickenModel.updateOne({
                     _id: req.params.id
                 }, {
-                    steps: req.query.steps
+                    steps: chicken.steps + parseInt(req.query.steps),
+                    isRunning: true
                 })
                 res.status(200).send(`Chicken is running! ${req.query.steps} steps`)
             }
         } else {
-            res.send("Specify the query params steps! Example: http://localhost:8000/chicken/run/<id>?steps=<number>")
+            await ChickenModel.updateOne({
+                _id: req.params.id
+            }, {
+                steps: chicken.steps + 1,
+                isRunning: true
+            })
+            res.status(200).send("Chicken is running! 1 step")
         }
     } catch (err) {
         console.log(err)
@@ -91,7 +101,7 @@ router.delete("/:id", async (req, res) => { // Delete a chicken with ID DELETE h
         }
     } catch (err) {
         console.log(err)
-        res.status(404).send("Chicken not found")
+        res.status(500).send("Chicken not found")
     }
 })
 
