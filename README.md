@@ -24,7 +24,7 @@ Voici les différentes routes de l'API :
 ### Mes ajouts : 
 
 * Ajout d'un script pour l'installation
-* Au lieu de seulement faire avancer le poulet de 1 steps, j'ai préféré rajouté la possibilité choisir le nombre de pas qu'on souhaite.
+* Au lieu de seulement faire avancer le poulet de 1 step, j'ai préféré rajouté la possibilité choisir le nombre de pas qu'on souhaite.
 * Ajout d'un fichier fixtures.js pour avoir déjà des poulets dans la base de donnée
 
 ### Installation : 
