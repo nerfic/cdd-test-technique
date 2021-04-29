@@ -2,7 +2,9 @@ const express = require("express");
 const cors = require("cors")
 const bodyParser = require("body-parser")
 
+const db = require("./services/mongoose")
 const ChickenController = require("./controllers/chicken")
+
 const app = express();
 
 app.use(cors())
