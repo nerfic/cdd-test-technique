@@ -21,6 +21,6 @@ Voici les différentes routes de l'API :
 ### Installation : 
 
 1) git clone git@github.com:nerfic/cdd-test-technique.git
-2) cd cdd-test-technique && npm install
-3) cd ./models/ && node fixtures.js
-4) cd ../ && node index.js
+2) cd cdd-test-technique
+3) sh install.sh // Sert à installer les packages npm et les fixtures
+4) node index.js
